@@ -15,7 +15,7 @@
 
 - ⚡ Fun fact **I feel fun when I code while drinking coffee.**
 
-- 📫 How to reach me <a href="mailto:**81797888@tour.s-mu.edu.eg**">Email</a>
+- 📫 How to reach me <a href="mailto:81797888@tour.s-mu.edu.eg">Email</a>
 
 <h3 align="left">Languages and Tools:</h3>
 <br>
