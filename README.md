@@ -11,7 +11,7 @@
 
 - 🌱I am interested in advanced **object-oriented programming concepts** and applying **SOLID principles** to my projects.
 
-- 💬 Ask me about **Html - CSS - JavaScript - Bootstrap - Dart - Flutter**
+- 💬 Ask me about **Html - CSS - JavaScript - Bootstrap - Dart - Flutter - Firebase**
 
 - ⚡ Fun fact **I feel fun when I code while drinking coffee.**
 
