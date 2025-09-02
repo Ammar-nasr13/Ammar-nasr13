@@ -46,7 +46,8 @@
   <img width="14" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/xd/xd-original.svg" height="50" alt="Adobe Xd logo" />
   <img width="20" />
-  
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg"  height="50" alt="Linux Logo" />
+          
   
  
 </div>
