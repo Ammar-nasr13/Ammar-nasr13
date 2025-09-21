@@ -1,1 +1,94 @@
+# .github/workflows/update-profile.yml
+name: 🚀 Update GitHub Profile
 
+on:
+  schedule:
+    # تشغيل كل 6 ساعات
+    - cron: '0 */6 * * *'
+  
+  # تشغيل عند push إلى main branch
+  push:
+    branches: [ main, master ]
+    paths:
+      - 'github_profile_generator.py'
+      - '.github/workflows/update-profile.yml'
+  
+  # تشغيل يدوي
+  workflow_dispatch:
+
+jobs:
+  update-profile:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 🔄 Checkout Repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
+    
+    - name: 🐍 Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+    
+    - name: 📦 Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests matplotlib seaborn numpy python-dateutil
+        # تثبيت الخطوط العربية
+        sudo apt-get update
+        sudo apt-get install -y fonts-dejavu-core fonts-liberation
+    
+    - name: 📊 Generate Profile Stats
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        python github_profile_generator.py
+    
+    - name: 🎨 Optimize Images
+      run: |
+        # تحسين حجم الصور إذا كانت متوفرة
+        if command -v optipng &> /dev/null; then
+          find . -name "*.png" -exec optipng -o2 {} \;
+        fi
+        
+        # إنشاء thumbnails للصور الكبيرة
+        if [ -f "github_dashboard.png" ]; then
+          echo "✅ Dashboard image created: $(ls -lh github_dashboard.png)"
+        fi
+        
+        if [ -f "language_distribution.png" ]; then
+          echo "✅ Language chart created: $(ls -lh language_distribution.png)"
+        fi
+    
+    - name: 📝 Validate Generated Files
+      run: |
+        # التحقق من وجود الملفات المطلوبة
+        required_files=("README.md" "github_stats.json")
+        
+        for file in "${required_files[@]}"; do
+          if [ -f "$file" ]; then
+            echo "✅ $file exists"
+            # عرض حجم الملف
+            ls -lh "$file"
+          else
+            echo "❌ $file is missing!"
+            exit 1
+          fi
+        done
+        
+        # التحقق من صحة JSON
+        if ! python -m json.tool github_stats.json > /dev/null; then
+          echo "❌ Invalid JSON in github_stats.json"
+          exit 1
+        fi
+        
+        echo "✅ All files validated successfully"
+    
+    - name: 📈 Display Statistics Summary
+      run: |
+        if [ -f "github_stats.json" ]; then
+          echo "📊 Generated Statistics Summary:"
+          python -c "
