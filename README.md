@@ -13,7 +13,7 @@
 
 - ⚡ Fun fact **I feel fun when I code while drinking coffee.**
 
-<h2 align="left">Languages and Tools :</h2>
+<h2 align="left">💻 Languages and Tools </h2>
 <br>
 <div align="center">
    
@@ -49,9 +49,22 @@
 
 ## 📊 GitHub Statistics
 
-| GitHub Stats | Most Used Languages |
-|:----------:|:-----------:|
-| ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Ammar-nasr13&show_icons=true&theme=radical) | ![Most Used Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Ammar-nasr13&layout=compact&theme=radical) |
+ <div class="container" align=center>
+        <table  border="4">
+            <tr>
+                <th>GitHub Stats</th>
+                <th>Most Used Languages</th>
+            </tr>
+            <tr>
+                <td>
+                    <img src="https://github-readme-stats.vercel.app/api?username=Ammar-nasr13&show_icons=true&theme=radical" alt="GitHub Statistics">
+                </td>
+                <td>
+                    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ammar-nasr13&layout=compact&theme=radical" alt="Most Used Languages">
+                </td>
+            </tr>
+        </table>
+    </div>
 
 ## 🔧 How to Install
 
@@ -59,7 +72,7 @@
 ```bash
 git clone https://github.com/Ammar-nasr13/your-repository-name
 ```
-<h2 align="left">Connect with me :</h2>
+<h2 align="left">📞Connect with me :</h2>
 <p align="center">
 <a href="https://www.linkedin.com/in/ammar-nasr-4645a8269?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg"  height="45" width="40" /></a>
  <img width="14" />
