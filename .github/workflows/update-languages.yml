@@ -2,8 +2,8 @@ name: Update Languages Chart
 
 on:
   schedule:
-    - cron: '0 0 * * 0'  # يعمل كل أسبوع يوم الأحد عند منتصف الليل
-  workflow_dispatch:  # يسمح بتشغيل يدوي
+    - cron: '0 0 * * 0'  # Run every Sunday at midnight
+  workflow_dispatch:  # Allow manual run
   push:
     branches: [ main, master ]
     paths: 
@@ -14,14 +14,14 @@ jobs:
   update-languages-chart:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # هذا مهم لصلاحيات الكتابة
+      contents: write  # Important for write permissions
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
       with:
         fetch-depth: 0
-        token: ${{ secrets.GITHUB_TOKEN }}  # إضافة التوكن هنا أيضاً
+        token: ${{ secrets.GITHUB_TOKEN }}  # Add token here too
       
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -45,10 +45,10 @@ jobs:
         git config --local user.name "GitHub Action"
         git add charts/
         
-        # التحقق من وجود تغييرات
+        # Check if there are changes
         if [ -n "$(git status --porcelain --untracked-files=no)" ]; then
           git commit -m "Update languages chart [skip ci]"
           git push
         else
-          echo "لا توجد تغييرات للالتزام"
+          echo "No changes to commit"
         fi
