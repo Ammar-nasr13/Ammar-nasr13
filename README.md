@@ -5,9 +5,9 @@
 
 - 📌 I'm **Ammar !** Welcome to my GitHub profile.
 
-- 🔭 I'm passionate about **Front-end & Mobile App Developer** using HTML , CSS , JavaScript , Dart and Flutter.
+- 🔭 I'm passionate about **Front-end & Mobile App Developer** using Web Language and Flutter Framework.
 
-- 🌱I am interested in advanced **object-oriented programming concepts** and applying **SOLID principles** to my projects.
+- 🌱I am interested in advanced **object-oriented programming concepts** and applying **SOLID principles and Design Pattern** to my projects.
 
 - 💬 Ask me about **Html - CSS - JavaScript - Bootstrap - Dart - Flutter - Firebase**
 
