@@ -5,7 +5,7 @@
 
 - 📌 I'm **Ammar !** Welcome to my GitHub profile.
 
-- 🔭 I'm passionate about **Front-end & Mobile App Developer** using Web Language and Flutter Framework.
+- 🔭 I'm passionate about **Mobile App Developer** using Flutter Framework.
 
 - 🌱I am interested in advanced **object-oriented programming concepts** and applying **SOLID principles and Design Pattern** to my projects.
 
